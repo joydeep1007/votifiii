@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d8b87c, #e9bf71, #fcc347);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container {
+  background: rgb(239, 230, 230);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  padding: 50px 40px;
+  width: 80%;
+  max-width: 1200px;
+  animation: zoomIn 1.2s ease forwards;
+  transform: scale(0);
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.login-form h1 {
+  grid-column: 1 / -1;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px 20px;
+  margin: 5px 0;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #333;
+  font-size: 16px;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.login-form input::placeholder {
+  color: #73686862;
+}
+
+.login-form input:focus {
+  outline: none;
+  border: 2px solid #00000026;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px #00000064;
+}
+
+/* Optional: Add subtle floating effect on hover */
+.login-form input:hover {
+  transform: scale(1.03);
+}
+
+.login-form button {
+  grid-column: 1 / -1;
+  width: 50%;
+  margin: 20px auto;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.login-form button:hover {
+  transform: scale(1.1);
+}
+
+.login-form p {
+  grid-column: 1 / -1;
+  color: #060000;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-form a {
+  color: #655eb4;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Fade animation for heading */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
